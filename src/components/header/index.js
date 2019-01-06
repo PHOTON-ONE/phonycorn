@@ -16,9 +16,9 @@ const styles = theme => ({
     })`,
   },
   bottomBar: {
-    background: `linear-gradient(to right, ${theme.palette.primary.light}, ${
-      theme.palette.primary.main
-    })`,
+    "background": "linear-gradient(270deg, #ae174e, #f06292)",
+    "backgroundSize": "400% 400%",
+    "animation": "scrollingGradient 13s ease infinite",
     width: "100%",
     height: "64px",
     position: "absolute",

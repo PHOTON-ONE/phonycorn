@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const styles = theme => ({
     root: {
@@ -11,9 +12,17 @@ const styles = theme => ({
 class Header extends Component {
     render() {
         return (
-            <Typography variant="h3" className={this.props.classes.root}>{this.props.children}</Typography>
+            <Typography variant={this.props.variant} className={this.props.classes.root}>{this.props.children}</Typography>
         );
     }
 }
 
 export default withStyles(styles)(Header);
+
+Header.propTypes = {
+    variant: PropTypes.string
+}
+
+Header.defaultProps = {
+    variant: "h3"
+}

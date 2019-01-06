@@ -36,7 +36,6 @@ class BackPanel extends Component {
     
     handleScroll = (e) => {
         this.setState({scrollY: window.scrollY});
-        console.log(window.scrollY);
 
         if(window.scrollY >= 254) {
            

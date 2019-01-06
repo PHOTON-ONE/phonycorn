@@ -40,5 +40,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+  if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+    if (xmlhttp.status == 200) {
+      window.profiles = JSON.parse(xmlhttp.responseText);
+    } else if (xmlhttp.status == 404) {
+      console.log('File not found!');
+    } else {
+      console.log('Unexpected error occured!');
+    }
+  }
+};
+xmlhttp.open("GET", "%PUBLIC_URL%/profiles.json", false);
+xmlhttp.send();
+
+    </script>
   </body>
 </html>

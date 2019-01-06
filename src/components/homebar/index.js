@@ -13,14 +13,19 @@ const styles = theme => ({
   },
   appBar: {
     boxShadow: "none",
-    background: `linear-gradient(to bottom, ${theme.palette.background} 85%, #E23975)`,
+    background: "linear-gradient(to top, #3b262d 92%, #B01950 8%)"
   },
   toolbar: {
-      padding: "0px 15vw 0px 15vw"
+    padding: "0px 15vw 0px 15vw",
   },
   grow: {
     flexGrow: 1,
   },
+  logo: {
+    fontFamily: "'Pacifico', cursive",
+    color: theme.palette.primary.light,
+    fontSize: "1.8rem",
+  }
 });
 
 function HomeBar(props) {
@@ -30,11 +35,9 @@ function HomeBar(props) {
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="static">
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h6" color="inherit">
-            {title}
-          </Typography>
+          <Typography variant="h5" className={classes.logo}><u>{title}</u></Typography>
           <div className={classes.grow} />
-              <IconButton color="inherit">
+              <IconButton color="inherit" onClick={() => props.handlePolicyOpen()}>
                   <NewReleasesOutlined />
               </IconButton>
         </Toolbar>
@@ -45,7 +48,8 @@ function HomeBar(props) {
 
 HomeBar.propTypes = {
   classes: PropTypes.object.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  handlePolicyOpen: PropTypes.func
 };
 
 export default withStyles(styles)(HomeBar);
