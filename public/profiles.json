@@ -1,21 +1,54 @@
 [{
 	"name": {
-        "first": "Ave",
-        "middle": "Testo",
-		"last": "Guseppe"
+        "first": "Wiktoria"
+
 	},
-	"age": "42",
-	"photo": "https://images.unsplash.com/photo-1533407180697-9d0479dc5b3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
+	"age": "23",
+	"photo": "https://i.imgur.com/qGClED2.png",
     "phone": "+69 420 420 420",
-    "description": "Lorem ipsum"
+    "description": "Gor¹ca kobieta wci¹¿ pragn¹ca nowych doznañ. Jestem strasznie podniecona na sam¹ myœl rozmowy z Tob¹…"
 },
+
 {
 	"name": {
-        "first": "Dariusz",
-		"last": "NapaliÅ‚o"
+        "first": "Zuzanna"
+
 	},
-	"age": "35",
-	"photo": "https://images.unsplash.com/photo-1524504259109-ddd837233694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+	"age": "28",
+	"photo": "https://i.imgur.com/idfDyBG.jpg",
     "phone": "+69 420 420 420",
-    "description": "Lorem ipsum"
+    "description": "S³odka blondynka z piêknym cia³kiem, wci¹¿ szukaj¹ca faceta, który potrafi rozgrzaæ kobietê swoim g³osem i otworzyæ j¹ na erotyczne przyjemnoœci."
+},
+
+{
+	"name": {
+        "first": "Kaja"
+
+	},
+	"age": "25",
+	"photo": "https://i.imgur.com/ZbeSb9I.jpg",
+    "phone": "+69 420 420 420",
+    "description": "Œliczna mê¿atka zaniedbywana przez mê¿a, szukaj¹ca nowych, gor¹cych doznañ."
+},
+
+{
+	"name": {
+        "first": "Klaudia"
+
+	},
+	"age": "24",
+	"photo": "https://i.imgur.com/Le0MLoB.jpg",
+    "phone": "+69 420 420 420",
+    "description": "Samotna pracowniczka du¿ej korporacji, pragn¹ca rozluŸnienia poprzez gor¹c¹ seks rozmowê z Tob¹!"
+},
+
+{
+	"name": {
+        "first": "Lidia"
+
+	},
+	"age": "21",
+	"photo": "https://i.imgur.com/t9GLEY4.png",
+    "phone": "+69 420 420 420",
+    "description": "Dominuj¹ca kobieta pragn¹ca ostrego r¿niêcia oraz poszukuj¹ca nowych niewolników."
 }]
