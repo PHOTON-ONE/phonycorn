@@ -23,7 +23,7 @@ class Footer extends Component {
         const {classes} = this.props;
 
         return (
-            <div className={classes.root}><div className={classes.content}>Copyright (c) 2018 sexus.eu</div></div>
+            <div className={classes.root}><div className={classes.content}>Copyright (c) {new Date().getFullYear()} sexus.eu</div></div>
         );
     }
 }
