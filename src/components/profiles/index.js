@@ -1,14 +1,7 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Grow, withStyles, Grid } from "@material-ui/core";
+import { withStyles, Grid } from "@material-ui/core";
 
 import Profile from "./profile";
-
-import Profile01 from 'media/profiles/1.png';
-import Profile02 from 'media/profiles/2.png';
-import Profile03 from 'media/profiles/3.png';
-import Profile04 from 'media/profiles/4.png';
-import Profile05 from 'media/profiles/5.png';
 
 const styles = theme => ({
   root: {},
@@ -27,7 +20,6 @@ class Profiles extends Component {
   }
 
   componentDidMount() {
-      console.log(window.profiles);
     window.addEventListener("scroll", this.handleScroll);
   }
 

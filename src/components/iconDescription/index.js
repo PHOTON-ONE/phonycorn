@@ -19,7 +19,17 @@ const styles = theme => ({
       padding: "20px 24px 20px 24px"
   },
   icon: {
-    "background":`linear-gradient(to right top, ${theme.palette.primary.light}, ${theme.palette.primary.dark})`,"WebkitBackgroundClip":"text","WebkitTextFillColor":"transparent"
+    maxWidth: "40px",
+    maxHeight: "40px",
+  },
+  iconContainer: {
+    padding: "10px",
+    "background":`linear-gradient(to right top, rgba(240,98,146, .2), rgba(174,23,78, .2))`,
+    position: "relative",
+    display: "inline-block",
+    borderRadius: "100px",
+    width: "40px",
+    height: "40px",
   }
 });
 
@@ -30,17 +40,17 @@ class IconDescription extends Component {
     const elements = [
         {
           title: "Niezapomniane chwile",
-          icon: <FavoriteIcon style={{fontSize: "48px"}} className={classes.icon} />,
+          icon: <div className={classes.iconContainer}><FavoriteIcon color="white" style={{fontSize: "48px"}} className={classes.icon} /></div>,
           text: "Ogromne erotyczne spełnienie bez wychodzenia z domu! Jesteśmy dostępni przez całą dobę specjalnie dla Ciebie!"
         },
         {
           title: "Pełna anonimowość",
-          icon: <ShieldIcon style={{fontSize: "48px"}} className={classes.icon} />,
+          icon: <div className={classes.iconContainer}><ShieldIcon color="white" style={{fontSize: "48px"}} className={classes.icon} /></div>,
           text: "Nie musisz obawiać się, że ktoś się dowie o tym, że z nami rozmawiałeś! Nasze usługi są bezpiecznym sposobem na rozładowanie napięcia seksualnego."
         },
         {
           title: "Wysoka jakość usług",
-          icon: <StarIcon style={{fontSize: "48px"}} className={classes.icon} />,
+          icon: <div className={classes.iconContainer}><StarIcon color="white" style={{fontSize: "48px"}} className={classes.icon} /></div>,
           text: "Gwarantujemy ogromną satysfakcję z prowadzonej z nami rozmowy. Zadzwoń i się przekonaj, a na pewno Cię nie zawiedziemy!"
         },
       ];

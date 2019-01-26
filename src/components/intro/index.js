@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withStyles, Button, Typography } from "@material-ui/core";
+import HeaderX from "utils/header";
+import { withStyles, Button, Typography, Icon } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
@@ -8,11 +9,11 @@ const styles = theme => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "70vw",
-    height: "70vh",
+    width: "85vw",
+    minHeight: "50vh",
     background: "#fff",
     zIndex: 999,
-    borderRadius: "5rem",
+    borderRadius: "3rem",
     overflow: "hidden",
     boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
     
@@ -48,10 +49,11 @@ const styles = theme => ({
       "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d81b60' fill-opacity='0.10'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
   },
   content: {
-    padding: "3rem",
+    height: "100%",
     marginLeft: "30%",
     maxWidth: "70%",
   },
+  contentAlign: {"top":"50%","position":"absolute","transform":"translateY(-50%)","paddingLeft":"3rem","paddingRight":"3rem"},
   imgContainer: {
     backgroundImage:
       'url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80")',
@@ -65,6 +67,9 @@ const styles = theme => ({
     left: 0,
     right: 0,
     bottom: 0,
+  },
+  leftIcon: {
+    marginRight: theme.spacing.unit,
   },
 });
 
@@ -80,35 +85,30 @@ class Intro extends Component {
           <div className={classes.imgContainer} />
 
           <div className={classes.content}>
+            <div className={classes.contentAlign}>
+            <HeaderX>Uwaga!</HeaderX>
+            <br/>
             <Typography variant="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vitae pulvinar est. Maecenas tempus ullamcorper hendrerit.
-              Phasellus nec mollis urna. Phasellus vulputate nulla in mi gravida
-              maximus. Integer tincidunt eros eget purus lacinia, ac dictum arcu
-              luctus. Phasellus lacinia sodales est ac ultricies. Maecenas
-              lacinia vulputate neque. Praesent quis quam sit amet risus
-              placerat efficitur. Praesent id nisl fermentum neque pulvinar
-              elementum non eu sapien. Aliquam eget dictum ex, a ultricies ante.
-              Quisque sem ipsum, vehicula vel maximus quis, volutpat eu nulla.
-              Donec nisi neque, placerat quis mattis at, condimentum sed ipsum.
-              Duis lacus est, rhoncus nec mi at, auctor auctor ligula. Etiam
-              dignissim eros sit amet eros ullamcorper molestie. Sed non nibh
-              vel mauris facilisis malesuada dapibus nec elit. Curabitur in
-              sollicitudin augue. Suspendisse volutpat finibus enim ac suscipit.
-              Cras convallis velit sem, et volutpat nisi tincidunt rutrum.
-              Vivamus id ante convallis magna commodo vehicula non vel magna.
-              Vivamus nisl eros, blandit vestibulum lorem at, ultricies lobortis
-              sem. Quisque lacinia eu ex ut rhoncus. Vestibulum a dui vel risus
-              sagittis pellentesque. Aenean ac volutpat mauris.
+              Strona zawiera treści o charakterze erotycznym i jest przeznaczona wyłącznie dla osób pełnoletnich! Jeśli nie ukończyłeś 18 roku życia i tym samym w świetle polskiego prawa nie jesteś osobą pełnoletnią, nie wolno Ci przechodzić dalej. Przechodząc dalej akceptujesz regulamin, warunki obowiązujące na stronie, wyrażasz zgodę na wykorzystywanie przez nas technologii Web Storage oraz oświadczasz, że masz ukończone 18 lat.
             </Typography>
             <br/>
             <Button
               variant="contained"
               size="large"
               color="primary"
+              style={{marginRight: "10px"}}
               onClick={handleClose}>
+              <Icon className={classes.leftIcon}>check</Icon>
               Wejdź
             </Button>
+            <Button
+              onClick={() => this.props.handlePolicyOpen()}
+              variant="text"
+              color="primary">
+              <Icon className={classes.leftIcon}>new_releases</Icon>
+              Regulamin
+            </Button>
+            </div>
           </div>
         </div>
         <div className={classes.blur} />

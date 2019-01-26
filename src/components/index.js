@@ -5,3 +5,4 @@ export {default as Footer} from "./footer";
 export {default as IconDescription} from './iconDescription';
 export {default as Intro} from './intro';
 export {default as Profiles} from './profiles';
+export {default as CallInfo} from './callInfo/';

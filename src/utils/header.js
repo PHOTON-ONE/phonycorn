@@ -12,7 +12,7 @@ const styles = theme => ({
 class Header extends Component {
     render() {
         return (
-            <Typography variant={this.props.variant} className={this.props.classes.root}>{this.props.children}</Typography>
+            <Typography variant={this.props.variant} style={this.props.style} className={this.props.classes.root}>{this.props.children}</Typography>
         );
     }
 }
